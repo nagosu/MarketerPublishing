@@ -512,6 +512,26 @@ body {
   border-radius: 5px 5px 5px 5px;
   background-color: #f6f7f8;
 }
+.latest-news .item .news-box .imageContainer {
+  position: relative;
+  cursor: pointer;
+}
+.latest-news .item .news-box .imageContainer img {
+  transition: all 0.25s ease-in-out;
+}
+.latest-news .item .news-box .imageContainer svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.latest-news .item .news-box .imageContainer:hover img {
+  filter: brightness(40%);
+}
+.latest-news .item .news-box .imageContainer:hover svg {
+  display: block;
+}
 .latest-news .item .news-box .news-description h3 {
   color: #454545;
   font-size: 20px;
@@ -610,6 +630,16 @@ body {
 }
 .amazing-team .row .col .team-icon {
   margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.amazing-team .row .col .team-icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .working-process {
@@ -670,6 +700,24 @@ body {
   margin-top: -10px;
   display: inline-block;
   border-radius: 50%;
+  transition: all 300ms ease-in-out 0s;
+}
+.working-process .container .row .col .process .process-circle:hover {
+  filter: brightness(1.4);
+}
+.working-process .container .row .col .process .process-circle:hover .hoverText {
+  display: block;
+}
+.working-process .container .row .col .process .process-circle .hoverText {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #454545;
+  font-size: 14px;
+  line-height: 24px;
   transition: all 300ms ease-in-out 0s;
 }
 .working-process .container .row .col .process .process-circle .process-title {
@@ -737,6 +785,13 @@ body {
   font-weight: 700;
   vertical-align: top;
   transition: background-color 0.25s ease-in-out;
+  cursor: pointer;
+}
+.newsletter .newsletter_box .mail_info .newsletter_info .submit_button_newsletter:hover {
+  color: #ffffff;
+  background-color: #2980b9;
+  border: 1px solid #2980b9;
+  transition: background-color 0.25s ease-in-out;
 }
 
 .footer {
@@ -797,6 +852,10 @@ body {
   font-weight: 600;
   line-height: 1.3333333;
   border-radius: 6px;
+  transition: all 0.25s ease-in-out;
+}
+.footer .footer-top .col .btn-blue.xsmall:hover {
+  background-color: #2980b9;
 }
 .footer .footer-top .col ul.footer-list {
   display: block;
@@ -807,6 +866,9 @@ body {
   border-bottom: 1px solid #999;
   font-size: 14px;
   line-height: 28px;
+}
+.footer .footer-top .col ul.footer-list li:hover {
+  color: #3498db;
 }
 .footer .footer-top .col ul.footer-list li.first {
   padding-top: 0;
@@ -830,6 +892,10 @@ body {
   z-index: 10;
   width: 100%;
   height: auto;
+  cursor: pointer;
+}
+.footer .footer-top .col ul.footer-gallery li img:hover {
+  filter: brightness(0.4);
 }
 .footer .footer-top .col p.contact_info {
   margin-bottom: 8px;
@@ -837,40 +903,36 @@ body {
   line-height: 20px;
 }
 .footer .footer-bottom {
-  padding: 27px 0 55px 0;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10px;
 }
-.footer .footer-bottom .col-md-5 {
-  width: 41.66666667%;
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.footer .footer-bottom .col-md-5 .copyright {
-  width: 100%;
-}
-.footer .footer-bottom .col-md-5 .copyright p {
+.footer .footer-bottom .copyright {
   color: #999;
-  margin-bottom: 15px;
-  font-size: 15px;
-  line-height: 24px;
-  font-weight: 400;
 }
-.footer .footer-bottom .col-md-2 {
-  width: 16.66666667%;
-}
-.footer .footer-bottom .col-md-2 a {
-  position: relative;
-  width: 100%;
-  padding: 6px 7px 2px 7px;
-  font-size: 26px;
-  line-height: 26px;
-  color: #999 !important;
+.footer .footer-bottom .goUp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 45.5px;
   background-color: transparent;
   border: 1px solid #999;
   border-radius: 5px 5px 5px 5px;
-  transition: all 0.5s ease-in-out;
+}
+.footer .footer-bottom .footer-bottom-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.footer .footer-bottom .footer-bottom-row span {
+  color: #999;
+}
+.footer .footer-bottom .footer-bottom-row img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 .footer p {
   color: #ddd;
